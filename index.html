@@ -6,87 +6,151 @@
 <title>Australian Commons Tech</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
+/* ---- theme tokens ---- */
+:root{
+  --bg:         #f8f9fa;
+  --bg-card:    #fff;
+  --bg-input:   #fff;
+  --text:       #111827;
+  --text-sec:   #374151;
+  --text-muted: #6b7280;
+  --text-faint: #9ca3af;
+  --text-body:  #4b5563;
+  --border:     #e5e7eb;
+  --border-light:#f3f4f6;
+  --border-input:#d1d5db;
+  --shadow:     rgba(0,0,0,.08);
+  --shadow-sm:  rgba(0,0,0,.04);
+  --link:       #2563eb;
+  --active-bg:  #111827;
+  --active-fg:  #fff;
+  --tag-bg:     #f3f4f6;
+  --nearby-bg:  #ecfdf5;
+  /* entity badges — light */
+  --badge-nonprofit-bg:#dbeafe; --badge-nonprofit-fg:#1d4ed8;
+  --badge-coop-bg:#dcfce7;      --badge-coop-fg:#15803d;
+  --badge-social-bg:#fef3c7;    --badge-social-fg:#92400e;
+  --badge-peak-bg:#e0e7ff;      --badge-peak-fg:#4338ca;
+  --badge-foundation-bg:#fce7f3;--badge-foundation-fg:#9d174d;
+  --badge-corporate-bg:#fef3c7; --badge-corporate-fg:#92400e;
+  --badge-industry-bg:#f3e8ff;  --badge-industry-fg:#7c3aed;
+  color-scheme: light;
+}
+[data-theme="dark"]{
+  --bg:         #0f1117;
+  --bg-card:    #1a1d27;
+  --bg-input:   #1a1d27;
+  --text:       #e5e7eb;
+  --text-sec:   #d1d5db;
+  --text-muted: #9ca3af;
+  --text-faint: #6b7280;
+  --text-body:  #b0b7c3;
+  --border:     #2d3140;
+  --border-light:#232736;
+  --border-input:#3d4255;
+  --shadow:     rgba(0,0,0,.3);
+  --shadow-sm:  rgba(0,0,0,.2);
+  --link:       #60a5fa;
+  --active-bg:  #e5e7eb;
+  --active-fg:  #111827;
+  --tag-bg:     #2d3140;
+  --nearby-bg:  #0d2818;
+  /* entity badges — dark */
+  --badge-nonprofit-bg:#1e3a5f; --badge-nonprofit-fg:#93c5fd;
+  --badge-coop-bg:#14532d;      --badge-coop-fg:#86efac;
+  --badge-social-bg:#451a03;    --badge-social-fg:#fcd34d;
+  --badge-peak-bg:#1e1b4b;      --badge-peak-fg:#a5b4fc;
+  --badge-foundation-bg:#4a1942;--badge-foundation-fg:#f9a8d4;
+  --badge-corporate-bg:#451a03; --badge-corporate-fg:#fcd34d;
+  --badge-industry-bg:#2e1065;  --badge-industry-fg:#c4b5fd;
+  color-scheme: dark;
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#f8f9fa;color:#111827;line-height:1.6}
-header{padding:32px 24px 8px;text-align:center}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .2s,color .2s}
+header{padding:32px 24px 8px;text-align:center;position:relative}
 header h1{font-size:26px;font-weight:700;letter-spacing:-.5px}
-header p{font-size:13px;color:#6b7280;margin-top:2px}
-.top-tabs{display:flex;justify-content:center;gap:0;padding:12px 24px 0;border-bottom:1px solid #e5e7eb}
-.top-tab{padding:8px 20px;font-size:13px;font-weight:600;color:#9ca3af;background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s}
-.top-tab:hover{color:#374151}
-.top-tab.active{color:#111827;border-bottom-color:#111827}
+header p{font-size:13px;color:var(--text-muted);margin-top:2px}
+.top-tabs{display:flex;justify-content:center;gap:0;padding:12px 24px 0;border-bottom:1px solid var(--border)}
+.top-tab{padding:8px 20px;font-size:13px;font-weight:600;color:var(--text-faint);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s}
+.top-tab:hover{color:var(--text-sec)}
+.top-tab.active{color:var(--text);border-bottom-color:var(--text)}
 .view-container{display:none}
 .view-container.active{display:block}
 
+/* ---- theme toggle ---- */
+.theme-toggle{position:absolute;top:16px;right:24px;background:var(--bg-card);border:1.5px solid var(--border);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;color:var(--text-muted);display:flex;align-items:center;gap:5px;transition:all .15s}
+.theme-toggle:hover{border-color:var(--text-faint);color:var(--text-sec)}
+.theme-toggle .icon{font-size:14px;line-height:1}
+
 /* ---- city filter ---- */
 .city-bar{display:flex;justify-content:center;gap:6px;padding:12px 24px 16px}
-.city-btn{padding:5px 16px;border-radius:20px;border:1.5px solid #d1d5db;background:#fff;font-size:12px;font-weight:600;color:#6b7280;cursor:pointer;transition:all .15s}
-.city-btn:hover{border-color:#9ca3af;color:#374151}
-.city-btn.active{background:#111827;color:#fff;border-color:#111827}
+.city-btn{padding:5px 16px;border-radius:20px;border:1.5px solid var(--border-input);background:var(--bg-input);font-size:12px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .15s}
+.city-btn:hover{border-color:var(--text-faint);color:var(--text-sec)}
+.city-btn.active{background:var(--active-bg);color:var(--active-fg);border-color:var(--active-bg)}
 .city-btn .count{font-weight:400;color:inherit;opacity:.6;margin-left:4px}
 
 .vis-row{display:flex;gap:16px;padding:0 24px;max-width:1400px;margin:0 auto}
-.vis-panel{flex:1;min-width:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.vis-panel{flex:1;min-width:0;background:var(--bg-card);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px var(--shadow)}
 #map{height:520px}
 .sched-panel{display:flex;flex-direction:column;align-self:flex-start}
 .sched-head{display:flex;align-items:baseline;gap:8px;padding:12px 16px 6px}
-.sched-head h2{font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin:0}
-.sched-key{font-size:9px;color:#9ca3af}
+.sched-head h2{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin:0}
+.sched-key{font-size:9px;color:var(--text-faint)}
 .sched-key b{display:inline-block;width:8px;height:8px;border-radius:2px;vertical-align:-1px;margin-right:2px}
-.sched-day{display:flex;align-items:baseline;gap:6px;padding:5px 16px;border-bottom:1px solid #f3f4f6}
+.sched-day{display:flex;align-items:baseline;gap:6px;padding:5px 16px;border-bottom:1px solid var(--border-light)}
 .sched-day:last-child{border-bottom:none}
-.sched-day-label{width:28px;flex-shrink:0;font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase}
+.sched-day-label{width:28px;flex-shrink:0;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase}
 .sched-pills{display:flex;flex-wrap:wrap;gap:3px;padding:1px 0}
 .sched-pill{padding:2px 7px;border-radius:4px;font-size:9.5px;line-height:1.4;cursor:default;white-space:nowrap}
 .sched-pill.wk{color:#fff}
 .sched-pill.mo{background:transparent;border:1.5px solid}
-.sched-flex{padding:10px 16px 12px;border-top:1px solid #e5e7eb}
-.sched-flex-label{font-size:9px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.3px;margin-bottom:5px}
+.sched-flex{padding:10px 16px 12px;border-top:1px solid var(--border)}
+.sched-flex-label{font-size:9px;font-weight:600;color:var(--text-faint);text-transform:uppercase;letter-spacing:.3px;margin-bottom:5px}
 .sched-flex .sched-pills{gap:3px}
-.legend{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;padding:6px 16px 10px;border-top:1px solid #f3f4f6}
-.legend span{display:flex;align-items:center;gap:5px;font-size:10.5px;color:#6b7280}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;padding:6px 16px 10px;border-top:1px solid var(--border-light)}
+.legend span{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--text-muted)}
 .legend span::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--c);flex-shrink:0}
 main{max-width:1400px;margin:28px auto 0;padding:0 24px}
 .cat-section{margin-bottom:28px}
-.cat-section h2{font-size:14px;font-weight:600;padding-left:12px;margin-bottom:10px;border-left:3px solid var(--c);color:#374151;text-transform:uppercase;letter-spacing:.5px}
+.cat-section h2{font-size:14px;font-weight:600;padding-left:12px;margin-bottom:10px;border-left:3px solid var(--c);color:var(--text-sec);text-transform:uppercase;letter-spacing:.5px}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px}
-.card{background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.card{background:var(--bg-card);border-radius:8px;padding:14px 16px;box-shadow:0 1px 2px var(--shadow-sm)}
 .card h3{font-size:14px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:7px}
 .card .dot{width:9px;height:9px;border-radius:50%;background:var(--c);flex-shrink:0}
-.card .city-tag{margin-left:auto;font-size:9px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
-.card .members{font-size:10px;font-weight:400;color:#9ca3af;white-space:nowrap}
+.card .city-tag{margin-left:auto;font-size:9px;font-weight:600;color:var(--text-faint);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.card .members{font-size:10px;font-weight:400;color:var(--text-faint);white-space:nowrap}
 .card .meta{display:flex;align-items:center;gap:8px;margin-left:auto}
 .card dl{display:grid;grid-template-columns:38px 1fr;gap:2px 8px;font-size:12.5px}
-.card dt{font-weight:600;font-size:9.5px;letter-spacing:.4px;color:#9ca3af;text-transform:uppercase;padding-top:2px}
-.card dd{color:#4b5563}
-.card dd a{color:#2563eb;text-decoration:none}
+.card dt{font-weight:600;font-size:9.5px;letter-spacing:.4px;color:var(--text-faint);text-transform:uppercase;padding-top:2px}
+.card dd{color:var(--text-body)}
+.card dd a{color:var(--link);text-decoration:none}
 .card dd a:hover{text-decoration:underline}
-footer{max-width:1400px;margin:36px auto 48px;padding:20px 24px 0;border-top:1px solid #e5e7eb}
-footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+footer{max-width:1400px;margin:36px auto 48px;padding:20px 24px 0;border-top:1px solid var(--border)}
+footer h2{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
 /* ---- entity type badges ---- */
 .entity-type{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-left:6px;vertical-align:1px}
-.entity-type.nonprofit{background:#dbeafe;color:#1d4ed8}
-.entity-type.cooperative{background:#dcfce7;color:#15803d}
-.entity-type.social-enterprise{background:#fef3c7;color:#92400e}
-.entity-type.peak-body{background:#e0e7ff;color:#4338ca}
-.entity-type.ngo{background:#dbeafe;color:#1d4ed8}
-.entity-type.foundation{background:#fce7f3;color:#9d174d}
-.entity-type.government{background:#e0e7ff;color:#4338ca}
-.entity-type.corporate{background:#fef3c7;color:#92400e}
-.entity-type.industry-body{background:#f3e8ff;color:#7c3aed}
-.scope-tag{font-size:9px;font-weight:500;color:#9ca3af;text-transform:uppercase;letter-spacing:.3px}
+.entity-type.nonprofit,.entity-type.ngo{background:var(--badge-nonprofit-bg);color:var(--badge-nonprofit-fg)}
+.entity-type.cooperative{background:var(--badge-coop-bg);color:var(--badge-coop-fg)}
+.entity-type.social-enterprise{background:var(--badge-social-bg);color:var(--badge-social-fg)}
+.entity-type.peak-body{background:var(--badge-peak-bg);color:var(--badge-peak-fg)}
+.entity-type.foundation{background:var(--badge-foundation-bg);color:var(--badge-foundation-fg)}
+.entity-type.government{background:var(--badge-peak-bg);color:var(--badge-peak-fg)}
+.entity-type.corporate{background:var(--badge-corporate-bg);color:var(--badge-corporate-fg)}
+.entity-type.industry-body{background:var(--badge-industry-bg);color:var(--badge-industry-fg)}
+.scope-tag{font-size:9px;font-weight:500;color:var(--text-faint);text-transform:uppercase;letter-spacing:.3px}
 .funding-types{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
-.funding-type{font-size:9px;padding:1px 5px;border-radius:3px;background:#f3f4f6;color:#6b7280}
+.funding-type{font-size:9px;padding:1px 5px;border-radius:3px;background:var(--tag-bg);color:var(--text-muted)}
 
 /* ---- category filter ---- */
 .cat-bar{display:flex;gap:5px;padding:0 24px 16px;max-width:1400px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.cat-tab{padding:4px 12px;border-radius:16px;border:1.5px solid #e5e7eb;background:#fff;font-size:11px;font-weight:500;color:#6b7280;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px;flex-shrink:0;white-space:nowrap}
-.cat-tab:hover{border-color:#9ca3af;color:#374151}
-.cat-tab.active{background:#111827;color:#fff;border-color:#111827}
+.cat-tab{padding:4px 12px;border-radius:16px;border:1.5px solid var(--border);background:var(--bg-input);font-size:11px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px;flex-shrink:0;white-space:nowrap}
+.cat-tab:hover{border-color:var(--text-faint);color:var(--text-sec)}
+.cat-tab.active{background:var(--active-bg);color:var(--active-fg);border-color:var(--active-bg)}
 .cat-tab .cat-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .cat-tab.active .cat-dot{opacity:.7}
 .cat-tab .count{font-weight:400;opacity:.6;margin-left:2px}
-.nearby-btn{background:#ecfdf5!important;border-color:#059669!important;color:#059669!important}
+.nearby-btn{background:var(--nearby-bg)!important;border-color:#059669!important;color:#059669!important}
 .nearby-btn.active{background:#059669!important;color:#fff!important;border-color:#059669!important}
 .nearby-btn .count{display:none}
 .card .dist{font-size:10px;font-weight:500;color:#059669;white-space:nowrap}
@@ -95,15 +159,21 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 
 /* ---- resources ---- */
 .resources{max-width:1400px;margin:32px auto 0;padding:0 24px}
-.resources h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
-.resources p.resources-intro{font-size:12.5px;color:#9ca3af;margin-bottom:16px;line-height:1.7}
+.resources h2{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+.resources p.resources-intro{font-size:12.5px;color:var(--text-faint);margin-bottom:16px;line-height:1.7}
 .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.res-card{background:#fff;border-radius:8px;padding:12px 16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.res-card h3{font-size:13px;font-weight:600;color:#374151;margin-bottom:4px}
-.res-card h3 a{color:#2563eb;text-decoration:none}
+.res-card{background:var(--bg-card);border-radius:8px;padding:12px 16px;box-shadow:0 1px 2px var(--shadow-sm)}
+.res-card h3{font-size:13px;font-weight:600;color:var(--text-sec);margin-bottom:4px}
+.res-card h3 a{color:var(--link);text-decoration:none}
 .res-card h3 a:hover{text-decoration:underline}
-.res-card .res-scope{font-size:10px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}
-.res-card p{font-size:12px;color:#6b7280;line-height:1.6}
+.res-card .res-scope{font-size:10px;font-weight:600;color:var(--text-faint);text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}
+.res-card p{font-size:12px;color:var(--text-muted);line-height:1.6}
+
+/* ---- dark map tiles ---- */
+[data-theme="dark"] .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9)}
+[data-theme="dark"] .leaflet-control-attribution{background:rgba(15,17,23,.7)!important;color:var(--text-faint)!important}
+[data-theme="dark"] .leaflet-control-attribution a{color:var(--link)!important}
+[data-theme="dark"] .leaflet-control-zoom a{background:var(--bg-card)!important;color:var(--text)!important;border-color:var(--border)!important}
 
 /* ---- mobile ---- */
 @media(max-width:900px){
@@ -132,6 +202,7 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
   .resources{padding:0 12px}
   .cat-bar{padding:0 12px 12px;gap:4px}
   .cat-tab{font-size:10px;padding:3px 9px}
+  .theme-toggle{top:10px;right:12px;padding:3px 8px;font-size:11px}
 }
 @media(max-width:400px){
   .city-btn{font-size:10px;padding:3px 10px}
@@ -146,6 +217,7 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 <header>
 <h1>Australian Commons Tech</h1>
 <p>Shared hardware, free software, and community infrastructure — city by city</p>
+<button class="theme-toggle" id="theme-toggle" title="Switch theme"><span class="icon"></span><span class="label"></span></button>
 <div class="top-tabs">
 <button class="top-tab active" data-view="communities">Communities</button>
 <button class="top-tab" data-view="organisations">Organisations</button>
@@ -198,6 +270,45 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 'use strict';
+
+// ═══ THEME ═══
+
+const THEME_KEY = 'act-theme';
+const THEME_ICONS = {light:'☀️',dark:'🌙',system:'💻'};
+const THEME_LABELS = {light:'Light',dark:'Dark',system:'Auto'};
+const THEME_CYCLE = ['system','light','dark'];
+
+function getEffective(pref){
+  if(pref==='system') return window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  return pref;
+}
+
+function applyTheme(pref){
+  const eff = getEffective(pref);
+  document.documentElement.setAttribute('data-theme', eff);
+  const btn = document.getElementById('theme-toggle');
+  if(btn){
+    btn.querySelector('.icon').textContent = THEME_ICONS[pref];
+    btn.querySelector('.label').textContent = THEME_LABELS[pref];
+  }
+}
+
+function initTheme(){
+  const saved = localStorage.getItem(THEME_KEY) || 'system';
+  applyTheme(saved);
+  document.getElementById('theme-toggle').addEventListener('click', ()=>{
+    const cur = localStorage.getItem(THEME_KEY) || 'system';
+    const next = THEME_CYCLE[(THEME_CYCLE.indexOf(cur)+1)%THEME_CYCLE.length];
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
+  window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', ()=>{
+    const pref = localStorage.getItem(THEME_KEY) || 'system';
+    if(pref === 'system') applyTheme('system');
+  });
+}
+
+initTheme();
 
 // ═══ STATE ═══
 

@@ -1,0 +1,17 @@
+{
+  "id": "bsides-cbr",
+  "name": "BSides / CSides Canberra",
+  "shortName": "BSides CBR",
+  "category": "security",
+  "city": "canberra",
+  "members": null,
+  "lat": -35.282,
+  "lng": 149.135,
+  "who": "Infosec conference + monthly meetup community",
+  "what": "Security talks · CTF · monthly CSides meetups · annual BSides conference",
+  "when": "Monthly CSides + annual BSides",
+  "where": "Canberra",
+  "how": "bsidescbr.com.au",
+  "url": "https://www.meetup.com/bsides-csides-infosec-meetups/",
+  "why": "Capital-region security community"
+}

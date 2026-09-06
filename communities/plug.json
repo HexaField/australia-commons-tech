@@ -1,0 +1,17 @@
+{
+  "id": "plug",
+  "name": "Perth Linux Users Group (PLUG)",
+  "shortName": "PLUG",
+  "category": "opensource",
+  "city": "perth",
+  "members": null,
+  "lat": -31.905,
+  "lng": 115.955,
+  "who": "Not-for-profit Linux and free software community",
+  "what": "Linux talks · workshops · social events · live-streamed for regional WA",
+  "when": "Monthly presentations + social events",
+  "where": "Bassendean Library + online",
+  "how": "plug.org.au",
+  "url": "https://www.meetup.com/perth-linux-users-group-plug/",
+  "why": "Free software and open-source advocacy across WA"
+}

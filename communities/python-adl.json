@@ -1,0 +1,17 @@
+{
+  "id": "python-adl",
+  "name": "Python Adelaide",
+  "shortName": "Python ADL",
+  "category": "languages",
+  "city": "adelaide",
+  "members": null,
+  "lat": -34.928,
+  "lng": 138.6,
+  "who": "Python community — Adelaide",
+  "what": "Python talks · networking · local speakers",
+  "when": "Monthly meetups",
+  "where": "Adelaide",
+  "how": "meetup.com/pythonadelaide",
+  "url": "https://www.meetup.com/de-de/pythonadelaide/",
+  "why": "Python community in Adelaide"
+}

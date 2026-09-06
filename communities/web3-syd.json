@@ -1,0 +1,17 @@
+{
+  "id": "web3-syd",
+  "name": "Web3 Sydney",
+  "shortName": "Web3 Sydney",
+  "category": "decentralised",
+  "city": "sydney",
+  "members": 2892,
+  "lat": -33.884,
+  "lng": 151.197,
+  "who": "Decentralised tech community (beyond blockchain)",
+  "what": "Ethereum · Holochain · IPFS · Scuttlebutt · mutual credit · p2p comms",
+  "when": "Hack Sundays + regular events",
+  "where": "UTS Startups, 632 Harris St, Ultimo",
+  "how": "meetup.com/sydethereum",
+  "url": "https://www.meetup.com/sydethereum/",
+  "why": "Distributed trust, cryptoeconomics, and social implications"
+}

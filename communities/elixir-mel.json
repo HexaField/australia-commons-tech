@@ -1,0 +1,17 @@
+{
+  "id": "elixir-mel",
+  "name": "Elixir Melbourne",
+  "shortName": "Elixir Melb",
+  "category": "languages",
+  "city": "naarm",
+  "members": null,
+  "lat": -37.813,
+  "lng": 144.962,
+  "who": "Elixir / BEAM community",
+  "what": "Functional programming · Elixir ecosystem",
+  "when": "Monthly Thu 6pm",
+  "where": "Melbourne",
+  "how": "meetup.com/elixir-melbourne",
+  "url": "https://www.meetup.com/elixir-melbourne/",
+  "why": "Functional programming on the BEAM VM"
+}

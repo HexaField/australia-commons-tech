@@ -1,0 +1,17 @@
+{
+  "id": "rust-bne",
+  "name": "Rust Brisbane",
+  "shortName": "Rust BNE",
+  "category": "languages",
+  "city": "brisbane",
+  "members": 486,
+  "lat": -27.468,
+  "lng": 153.025,
+  "who": "Rust programming community",
+  "what": "Rust talks · learning · ecosystem news",
+  "when": "2nd Thu monthly 5pm",
+  "where": "Brisbane Square Library, 266 George St",
+  "how": "meetup.com/rust-brisbane",
+  "url": "https://www.meetup.com/rust-brisbane/",
+  "why": "Rust language community"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "merri-bek",
+  "name": "Merri-bek Tech",
+  "shortName": "Merri-bek Tech",
+  "category": "solarpunk",
+  "city": "naarm",
+  "members": 300,
+  "lat": -37.76,
+  "lng": 144.96,
+  "who": "Grassroots green technologists",
+  "what": "Mesh networking on Pis · local fediverse instance · solarpunk meetups",
+  "when": "Monthly solarpunk meetups + regular workshops",
+  "where": "Inner north Melbourne (Merri-bek)",
+  "how": "meetup.com/merri-bek-tech",
+  "url": "https://www.meetup.com/merri-bek-tech/",
+  "why": "Local-first infrastructure, climate resilience"
+}

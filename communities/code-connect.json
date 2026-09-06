@@ -1,0 +1,17 @@
+{
+  "id": "code-connect",
+  "name": "Melbourne Code Connect",
+  "shortName": "Code Connect",
+  "category": "community",
+  "city": "naarm",
+  "members": 2413,
+  "lat": -37.81,
+  "lng": 144.966,
+  "who": "All-level developer community",
+  "what": "Coding mentoring · workshops · social coding sessions",
+  "when": "Regular free sessions",
+  "where": "State Library of Victoria",
+  "how": "meetup.com/melbourne-code-mentoring-web-development-design",
+  "url": "https://www.meetup.com/melbourne-code-mentoring-web-development-design/",
+  "why": "Accessible entry point for new developers"
+}

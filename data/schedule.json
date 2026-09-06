@@ -1,0 +1,248 @@
+[
+  {
+    "communityId": "maker-community",
+    "day": "mon",
+    "time": "6:30–9:30pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "ai-ml-robots",
+    "day": "mon",
+    "time": "7pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "luv",
+    "day": "tue",
+    "time": "LAIT",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "luv",
+    "day": "tue",
+    "time": "1st Tue talks",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "infra-coders",
+    "day": "tue",
+    "time": "6–8pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "melb-ai-devs",
+    "day": "tue",
+    "time": "5:30pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "emdrc",
+    "day": "wed",
+    "time": "8:30pm on-air",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "gdg-mel",
+    "day": "wed",
+    "time": "Last Wed",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "maker-community",
+    "day": "thu",
+    "time": "6:30–9:30pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "emdrc",
+    "day": "thu",
+    "time": "Clubrooms",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "rust-mel",
+    "day": "thu",
+    "time": "5:30pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "elixir-mel",
+    "day": "thu",
+    "time": "6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "cchs",
+    "day": "fri",
+    "time": "2nd Fri Ironing",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "maker-community",
+    "day": "sat",
+    "time": "10am–4pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "melbpc",
+    "day": "sat",
+    "time": "µC 11am–4:30pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "luv",
+    "day": "sat",
+    "time": "3rd Sat workshop",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "imagineering",
+    "day": "sat",
+    "time": "Last Sat",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "emdrc",
+    "day": "sun",
+    "time": "10am on-air",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "melbpc",
+    "day": "sun",
+    "time": "CNC Team",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "wsti",
+    "day": "thu",
+    "time": "6pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "wsti",
+    "day": "sat",
+    "time": "10am",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "slug",
+    "day": "fri",
+    "time": "6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "golang-syd",
+    "day": "thu",
+    "time": "6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "fp-syd",
+    "day": "mon",
+    "time": "3rd Mon 6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "gdg-syd",
+    "day": "thu",
+    "time": "Last Thu",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "code4syd",
+    "day": "sat",
+    "time": "10:15am",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "ozberry",
+    "day": "sat",
+    "time": "10am",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "banga",
+    "day": "sat",
+    "time": "Repair café",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "hsbne",
+    "day": "tue",
+    "time": "6:30pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "bne-makerspace",
+    "day": "mon",
+    "time": "6pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "humbug",
+    "day": "sat",
+    "time": "3pm fortnightly",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "rust-bne",
+    "day": "thu",
+    "time": "2nd Thu 5pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "bne-ai-builders",
+    "day": "wed",
+    "time": "3rd Wed 5:15pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "artifactory",
+    "day": "mon",
+    "time": "Metal Mon 7pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "artifactory",
+    "day": "wed",
+    "time": "Arduino U 7:30pm",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "artifactory",
+    "day": "sat",
+    "time": "11am General",
+    "frequency": "weekly"
+  },
+  {
+    "communityId": "python-wa",
+    "day": "thu",
+    "time": "1st Thu 5:30pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "plug",
+    "day": "thu",
+    "time": "Monthly",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "python-cbr",
+    "day": "thu",
+    "time": "6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "newcastle-coders",
+    "day": "wed",
+    "time": "6pm",
+    "frequency": "monthly"
+  },
+  {
+    "communityId": "ttn-newcastle",
+    "day": "mon",
+    "time": "6:30pm",
+    "frequency": "monthly"
+  }
+]

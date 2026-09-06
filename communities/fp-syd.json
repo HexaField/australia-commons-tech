@@ -1,0 +1,17 @@
+{
+  "id": "fp-syd",
+  "name": "FP-Syd",
+  "shortName": "FP-Syd",
+  "category": "languages",
+  "city": "sydney",
+  "members": 1160,
+  "lat": -33.838,
+  "lng": 151.207,
+  "who": "Functional programming community",
+  "what": "Haskell · Erlang · F# · Scala · OCaml · theorem provers",
+  "when": "3rd Mon monthly 6pm",
+  "where": "North Sydney (Firehouse Hotel + others)",
+  "how": "meetup.com/fp-syd",
+  "url": "https://www.meetup.com/fp-syd/",
+  "why": "Functional programming across all languages"
+}

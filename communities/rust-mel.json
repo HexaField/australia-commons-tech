@@ -1,0 +1,17 @@
+{
+  "id": "rust-mel",
+  "name": "Rust Melbourne",
+  "shortName": "Rust Melb",
+  "category": "languages",
+  "city": "naarm",
+  "members": 1277,
+  "lat": -37.814,
+  "lng": 144.963,
+  "who": "Rust programming community",
+  "what": "Lightning talks and deep dives — systems · embedded · WASM",
+  "when": "Monthly Thu 5:30pm",
+  "where": "Stone & Chalk, Melbourne CBD",
+  "how": "rustmelbourne.com",
+  "url": "https://www.meetup.com/rust-melbourne/",
+  "why": "Systems programming with safety guarantees"
+}

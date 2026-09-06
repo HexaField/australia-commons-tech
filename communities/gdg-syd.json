@@ -1,0 +1,17 @@
+{
+  "id": "gdg-syd",
+  "name": "GDG Sydney",
+  "shortName": "GDG Sydney",
+  "category": "languages",
+  "city": "sydney",
+  "members": 5476,
+  "lat": -33.867,
+  "lng": 151.208,
+  "who": "Google Developer Group",
+  "what": "Android · Kotlin · Flutter · Firebase · Gemini · ML · IoT",
+  "when": "Last Thu monthly",
+  "where": "Mantel Group, Sydney",
+  "how": "meetup.com/gdgcloudsydney",
+  "url": "https://www.meetup.com/gdgcloudsydney/",
+  "why": "Google tech community"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "humbug",
+  "name": "Humbug",
+  "shortName": "Humbug",
+  "category": "opensource",
+  "city": "brisbane",
+  "members": 239,
+  "lat": -27.498,
+  "lng": 153.013,
+  "who": "Brisbane Unix and open-source support group",
+  "what": "Linux · BSD · Darwin troubleshooting · open-source discussion",
+  "when": "Fortnightly Sat 3pm",
+  "where": "University of Queensland, St Lucia",
+  "how": "humbug.org.au",
+  "url": "https://www.meetup.com/humbug/",
+  "why": "Free software mutual aid since the Unix era"
+}

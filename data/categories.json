@@ -1,0 +1,47 @@
+[
+  {
+    "id": "solarpunk",
+    "label": "Solarpunk & Resilience",
+    "color": "#059669"
+  },
+  {
+    "id": "makerspaces",
+    "label": "Makerspaces & Hardware",
+    "color": "#d97706"
+  },
+  {
+    "id": "radio",
+    "label": "Radio & Off-Grid",
+    "color": "#7c3aed"
+  },
+  {
+    "id": "decentralised",
+    "label": "Decentralised",
+    "color": "#0891b2"
+  },
+  {
+    "id": "ai",
+    "label": "AI & Physical Computing",
+    "color": "#2563eb"
+  },
+  {
+    "id": "opensource",
+    "label": "Open Source & Civic Tech",
+    "color": "#dc2626"
+  },
+  {
+    "id": "languages",
+    "label": "Languages",
+    "color": "#64748b"
+  },
+  {
+    "id": "community",
+    "label": "Community & Hubs",
+    "color": "#ca8a04"
+  },
+  {
+    "id": "security",
+    "label": "Security",
+    "color": "#be185d"
+  }
+]

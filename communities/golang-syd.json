@@ -1,0 +1,17 @@
+{
+  "id": "golang-syd",
+  "name": "Golang Sydney",
+  "shortName": "Golang Syd",
+  "category": "languages",
+  "city": "sydney",
+  "members": 2605,
+  "lat": -33.868,
+  "lng": 151.207,
+  "who": "Go programming community",
+  "what": "Workshops · tech talks · coding challenges · networking",
+  "when": "Monthly Thu 6pm",
+  "where": "Sydney (members-only venue)",
+  "how": "meetup.com/golang-syd",
+  "url": "https://www.meetup.com/golang-syd/",
+  "why": "Go language community"
+}

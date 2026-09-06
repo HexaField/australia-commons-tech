@@ -1,0 +1,17 @@
+{
+  "id": "cchs",
+  "name": "Hack Melbourne (CCHS)",
+  "shortName": "Hack Melbourne",
+  "category": "makerspaces",
+  "city": "naarm",
+  "members": null,
+  "lat": -37.822,
+  "lng": 145.034,
+  "who": "Community hackerspace (incorporated association)",
+  "what": "Electronics · 3D printing · metalwork · laser cutting · MicroPython · AI",
+  "when": "Multiple weekly sessions · MicroPython monthly · Friday Ironing Club",
+  "where": "5 Kent Lane, Hawthorn",
+  "how": "hackmelbourne.org",
+  "url": "https://hackmelbourne.org",
+  "why": "Collaborative making and peer learning"
+}

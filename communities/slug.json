@@ -1,0 +1,17 @@
+{
+  "id": "slug",
+  "name": "Sydney Linux Users Group",
+  "shortName": "SLUG",
+  "category": "opensource",
+  "city": "sydney",
+  "members": 1489,
+  "lat": -33.87,
+  "lng": 151.194,
+  "who": "One of the world's largest Linux user groups",
+  "what": "Linux talks · forensics · gaming · sysadmin · open-source advocacy",
+  "when": "Monthly Fri 6pm",
+  "where": "Google Australia, Pyrmont",
+  "how": "meetup.com/sydney-linux-user-group",
+  "url": "https://www.meetup.com/sydney-linux-user-group/",
+  "why": "Free software community and knowledge sharing"
+}

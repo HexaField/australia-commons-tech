@@ -1,0 +1,17 @@
+{
+  "id": "banga",
+  "name": "Banga Community Shed",
+  "shortName": "Banga Shed",
+  "category": "solarpunk",
+  "city": "sydney",
+  "members": null,
+  "lat": -33.906,
+  "lng": 151.21,
+  "who": "Repair + reuse cooperative (run by The Bower)",
+  "what": "Weekly repair café · electronics workshops · tool library · tagging & testing",
+  "when": "Weekly repair café (Saturdays) + regular workshops",
+  "where": "Joynton Ave, Green Square (former South Sydney Hospital)",
+  "how": "bower.org.au",
+  "url": "https://bower.org.au/",
+  "why": "\"Banga\" = make/do in Gadigal language. Australia's first electronics reuse hub"
+}

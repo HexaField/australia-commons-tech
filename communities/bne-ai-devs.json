@@ -1,0 +1,17 @@
+{
+  "id": "bne-ai-devs",
+  "name": "Brisbane AI Developers",
+  "shortName": "AI Devs BNE",
+  "category": "ai",
+  "city": "brisbane",
+  "members": null,
+  "lat": -27.472,
+  "lng": 153.028,
+  "who": "AI builder community (AI Camp network)",
+  "what": "GenAI · LLMs · agentic AI · MLOps · workshops · hackathons",
+  "when": "Monthly meetups",
+  "where": "Brisbane",
+  "how": "meetup.com/brisbane-ai-developers",
+  "url": "https://www.meetup.com/brisbane-ai-developers/",
+  "why": "Learn and practice AI together"
+}

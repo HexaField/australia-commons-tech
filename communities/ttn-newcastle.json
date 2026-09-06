@@ -1,0 +1,17 @@
+{
+  "id": "ttn-newcastle",
+  "name": "TTN Newcastle (LoRa / IoT)",
+  "shortName": "TTN NCL",
+  "category": "decentralised",
+  "city": "newcastle",
+  "members": 140,
+  "lat": -32.92,
+  "lng": 151.76,
+  "who": "Makers building The Things Network",
+  "what": "LoRa · IoT · community sensor networks · open-source gateways",
+  "when": "Monthly Mon 6:30pm",
+  "where": "Core Electronics, 132 Garden Grove Pde, Newcastle",
+  "how": "meetup.com/ttn-newcastle",
+  "url": "https://www.meetup.com/the-things-network-meetup-newcastle-lake-macquarie/",
+  "why": "Open community sensor infrastructure — mesh-adjacent"
+}

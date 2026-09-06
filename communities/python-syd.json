@@ -1,0 +1,17 @@
+{
+  "id": "python-syd",
+  "name": "Sydney Python (SyPy)",
+  "shortName": "SyPy",
+  "category": "languages",
+  "city": "sydney",
+  "members": 5906,
+  "lat": -33.869,
+  "lng": 151.204,
+  "who": "Python community",
+  "what": "Python development · Django · Flask · Pandas · data science",
+  "when": "Monthly meetups",
+  "where": "Various Sydney venues",
+  "how": "sypy.org",
+  "url": "https://www.meetup.com/sydneypython/",
+  "why": "Python and open-source technology"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "syd-ai-devs",
+  "name": "Sydney AI Developers",
+  "shortName": "AI Developers",
+  "category": "ai",
+  "city": "sydney",
+  "members": 8000,
+  "lat": -33.869,
+  "lng": 151.209,
+  "who": "AI builder community (AI Camp network)",
+  "what": "GenAI · LLMs · agentic AI · MLOps · workshops · code labs",
+  "when": "Monthly meetups",
+  "where": "Sydney CBD",
+  "how": "meetup.com/sydney-ai-tech-talks",
+  "url": "https://www.meetup.com/sydney-ai-tech-talks/",
+  "why": "Learn and practice AI together"
+}

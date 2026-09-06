@@ -1,0 +1,17 @@
+{
+  "id": "rladies",
+  "name": "R-Ladies+ Melbourne",
+  "shortName": "R-Ladies+",
+  "category": "ai",
+  "city": "naarm",
+  "members": 2575,
+  "lat": -37.808,
+  "lng": 144.965,
+  "who": "Gender-diverse R community",
+  "what": "R workshops · data science talks · reproducible research",
+  "when": "Regular meetups",
+  "where": "Various Melbourne venues",
+  "how": "meetup.com/rladies-melbourne",
+  "url": "https://www.meetup.com/rladies-melbourne/",
+  "why": "Gender diversity in data science"
+}

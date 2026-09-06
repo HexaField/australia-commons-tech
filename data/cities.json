@@ -1,0 +1,93 @@
+[
+  {
+    "id": "all",
+    "label": "All",
+    "lat": -28,
+    "lng": 134,
+    "zoom": 4
+  },
+  {
+    "id": "naarm",
+    "label": "Naarm / Melbourne",
+    "lat": -37.82,
+    "lng": 144.97,
+    "zoom": 12
+  },
+  {
+    "id": "sydney",
+    "label": "Warrane / Sydney",
+    "lat": -33.87,
+    "lng": 151.2,
+    "zoom": 12
+  },
+  {
+    "id": "brisbane",
+    "label": "Meanjin / Brisbane",
+    "lat": -27.47,
+    "lng": 153.03,
+    "zoom": 12
+  },
+  {
+    "id": "perth",
+    "label": "Boorloo / Perth",
+    "lat": -31.95,
+    "lng": 115.86,
+    "zoom": 12
+  },
+  {
+    "id": "adelaide",
+    "label": "Tarntanya / Adelaide",
+    "lat": -34.93,
+    "lng": 138.6,
+    "zoom": 12
+  },
+  {
+    "id": "canberra",
+    "label": "Ngambri / Canberra",
+    "lat": -35.28,
+    "lng": 149.13,
+    "zoom": 12
+  },
+  {
+    "id": "hobart",
+    "label": "Nipaluna / Hobart",
+    "lat": -42.88,
+    "lng": 147.33,
+    "zoom": 13
+  },
+  {
+    "id": "newcastle",
+    "label": "Muloobinba / Newcastle",
+    "lat": -32.93,
+    "lng": 151.78,
+    "zoom": 13
+  },
+  {
+    "id": "goldcoast",
+    "label": "Gold Coast",
+    "lat": -28.02,
+    "lng": 153.43,
+    "zoom": 12
+  },
+  {
+    "id": "wollongong",
+    "label": "Wollongong",
+    "lat": -34.43,
+    "lng": 150.89,
+    "zoom": 13
+  },
+  {
+    "id": "geelong",
+    "label": "Djillong / Geelong",
+    "lat": -38.15,
+    "lng": 144.36,
+    "zoom": 13
+  },
+  {
+    "id": "darwin",
+    "label": "Garramilla / Darwin",
+    "lat": -12.46,
+    "lng": 130.84,
+    "zoom": 13
+  }
+]

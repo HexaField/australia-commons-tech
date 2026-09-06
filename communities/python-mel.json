@@ -1,0 +1,17 @@
+{
+  "id": "python-mel",
+  "name": "Melbourne Python",
+  "shortName": "Python Melb",
+  "category": "languages",
+  "city": "naarm",
+  "members": 4786,
+  "lat": -37.812,
+  "lng": 144.96,
+  "who": "Python community",
+  "what": "Python development · data analytics · Django · open source",
+  "when": "Monthly meetups",
+  "where": "Various Melbourne venues",
+  "how": "meetup.com/melbourne-python-meetup-group",
+  "url": "https://www.meetup.com/melbourne-python-meetup-group/",
+  "why": "Python and open-source technology"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "hack-syd",
+  "name": "Hack Sydney",
+  "shortName": "Hack Sydney",
+  "category": "security",
+  "city": "sydney",
+  "members": 316,
+  "lat": -33.872,
+  "lng": 151.205,
+  "who": "Infosec discussion group",
+  "what": "Cyber security · penetration testing · networking · defensive skills",
+  "when": "1–2× monthly, 1.5h sessions",
+  "where": "Level 10, 447 Kent St, Sydney",
+  "how": "meetup.com/hack-sydney",
+  "url": "https://www.meetup.com/hack-sydney/",
+  "why": "Hands-on security knowledge"
+}

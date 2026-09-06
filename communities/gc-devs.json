@@ -1,0 +1,17 @@
+{
+  "id": "gc-devs",
+  "name": "Gold Coast Developer Meetup",
+  "shortName": "GC Devs",
+  "category": "community",
+  "city": "goldcoast",
+  "members": null,
+  "lat": -28.02,
+  "lng": 153.43,
+  "who": "Developer community",
+  "what": "All-stack development · networking · talks",
+  "when": "Regular meetups",
+  "where": "Gold Coast",
+  "how": "meetup.com/gold-coast-developer-meetup-group",
+  "url": "https://www.meetup.com/gold-coast-developer-meetup-group/",
+  "why": "Gold Coast developer hub"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "python-cbr",
+  "name": "Canberra Python",
+  "shortName": "Python CBR",
+  "category": "languages",
+  "city": "canberra",
+  "members": null,
+  "lat": -35.28,
+  "lng": 149.13,
+  "who": "Python community — ACT (sponsored by Linux Australia + ANU)",
+  "what": "Monthly talks · networking · AI safety discussions",
+  "when": "Monthly Thu 6pm",
+  "where": "ANU campus, Canberra",
+  "how": "meetup.com/canberra-python",
+  "url": "https://www.meetup.com/canberra-python-meetup-group/",
+  "why": "Python community backed by Linux Australia"
+}

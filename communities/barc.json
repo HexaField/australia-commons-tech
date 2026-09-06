@@ -1,0 +1,17 @@
+{
+  "id": "barc",
+  "name": "Brisbane Amateur Radio Club (VK4)",
+  "shortName": "BARC",
+  "category": "radio",
+  "city": "brisbane",
+  "members": null,
+  "lat": -27.47,
+  "lng": 153.03,
+  "who": "Amateur radio club — Brisbane",
+  "what": "Licensing courses · contests · digital modes · repeater operations · WICEN emergency comms",
+  "when": "Regular club meetings",
+  "where": "Brisbane",
+  "how": "wia.org.au/clubs/vk4",
+  "url": "https://www.wia.org.au/clubs/vk4/BrisbaneAmateurRadioClub/",
+  "why": "Amateur radio experimentation and emergency communications"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ozberry",
+  "name": "OzBerry IoT Maker Space",
+  "shortName": "OzBerry",
+  "category": "makerspaces",
+  "city": "sydney",
+  "members": 3214,
+  "lat": -33.798,
+  "lng": 151.18,
+  "who": "IoT builder community",
+  "what": "Arduino · Raspberry Pi · Beaglebone · robotics · AI · kids sessions",
+  "when": "Monthly Sat 10am",
+  "where": "Chatswood Library, 409 Victoria Ave",
+  "how": "meetup.com/ozberrypi",
+  "url": "https://www.meetup.com/ozberrypi/",
+  "why": "Open-source hardware for connected devices"
+}

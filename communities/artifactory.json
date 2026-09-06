@@ -1,0 +1,17 @@
+{
+  "id": "artifactory",
+  "name": "Perth Artifactory",
+  "shortName": "Artifactory",
+  "category": "makerspaces",
+  "city": "perth",
+  "members": 1543,
+  "lat": -31.9,
+  "lng": 115.841,
+  "who": "Community shed and premier makerspace",
+  "what": "Woodworking · metalwork · welding · electronics · Arduino · robotics · 3D printing",
+  "when": "Wed AM woodwork · Wed PM Arduino U · Sat 11am general · Mon PM metal",
+  "where": "16 Guthrie St, Osborne Park",
+  "how": "artifactory.org.au",
+  "url": "https://www.meetup.com/perth-artifactory/",
+  "why": "Shared tools in a supportive environment"
+}

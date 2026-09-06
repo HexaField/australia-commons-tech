@@ -1,0 +1,17 @@
+{
+  "id": "sectalks-syd",
+  "name": "SecTalks Sydney",
+  "shortName": "SecTalks",
+  "category": "security",
+  "city": "sydney",
+  "members": null,
+  "lat": -33.871,
+  "lng": 151.206,
+  "who": "Cybersecurity case-study community",
+  "what": "Technical infosec talks · CTF · case studies · defensive security",
+  "when": "Regular events",
+  "where": "Sydney CBD",
+  "how": "sectalks.org",
+  "url": "https://www.sectalks.org/sydney/",
+  "why": "Security knowledge sharing and practice"
+}

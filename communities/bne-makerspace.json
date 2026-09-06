@@ -1,0 +1,17 @@
+{
+  "id": "bne-makerspace",
+  "name": "Brisbane Makerspace",
+  "shortName": "BNE Maker",
+  "category": "makerspaces",
+  "city": "brisbane",
+  "members": 734,
+  "lat": -27.458,
+  "lng": 153.035,
+  "who": "Community workshop for makers",
+  "what": "3D printing · laser cutting · electronics · arts & crafts · coding",
+  "when": "Maker Monday 6pm (weekly)",
+  "where": "146 Wickham St, Fortitude Valley",
+  "how": "meetup.com/brisbane-makerspace",
+  "url": "https://www.meetup.com/brisbane-makerspace/",
+  "why": "Building a community of makers in Brisbane"
+}

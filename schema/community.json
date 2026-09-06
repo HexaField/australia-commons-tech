@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Community",
+  "description": "A commons-oriented tech community group or organisation.",
+  "type": "object",
+  "required": ["id", "name", "category", "city", "lat", "lng", "who", "what", "when", "where", "how", "url", "why"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique kebab-case identifier.",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full display name."
+    },
+    "shortName": {
+      "type": "string",
+      "description": "Abbreviated name for schedule pills and compact UI."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category ID from data/categories.json.",
+      "enum": ["solarpunk", "makerspaces", "radio", "decentralised", "ai", "opensource", "languages", "community", "security"]
+    },
+    "city": {
+      "type": "string",
+      "description": "City ID from data/cities.json."
+    },
+    "members": {
+      "type": ["integer", "null"],
+      "description": "Approximate member count, or null if unknown."
+    },
+    "lat": {
+      "type": "number",
+      "description": "Latitude (WGS84)."
+    },
+    "lng": {
+      "type": "number",
+      "description": "Longitude (WGS84)."
+    },
+    "who": {
+      "type": "string",
+      "description": "Who runs or participates in this community."
+    },
+    "what": {
+      "type": "string",
+      "description": "Activities, topics, and technologies covered."
+    },
+    "when": {
+      "type": "string",
+      "description": "Meeting schedule in human-readable form."
+    },
+    "where": {
+      "type": "string",
+      "description": "Physical location or online."
+    },
+    "how": {
+      "type": "string",
+      "description": "Short link label for the primary URL."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Primary URL (Meetup page, website, etc.)."
+    },
+    "why": {
+      "type": "string",
+      "description": "Why this community matters for the commons."
+    }
+  },
+  "additionalProperties": false
+}

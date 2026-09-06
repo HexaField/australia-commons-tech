@@ -1,0 +1,15 @@
+{
+  "naarm": "Meshtastic / LoRa · Reticulum · Holochain · Fediverse / ActivityPub · IPFS / libp2p · Self-hosting / Homelab · NixOS · Embedded Systems / Firmware · Right to Repair · Permaculture + Tech",
+  "sydney": "Meshtastic / LoRa · Reticulum · Holochain · Fediverse / ActivityPub · Self-hosting / Homelab · NixOS · Embedded Systems / Firmware · Permaculture + Tech · Rust (group appears inactive)",
+  "brisbane": "Meshtastic / LoRa · Fediverse / ActivityPub · Self-hosting / Homelab · Right to Repair / Repair Café · NixOS · Permaculture + Tech · Civic tech (no Code for Brisbane equivalent)",
+  "perth": "Decentralised tech / Web3 · AI community · Repair café / Right to Repair · Fediverse / ActivityPub · Civic tech · Mesh networking",
+  "adelaide": "Makerspaces · Decentralised tech · AI community · Civic tech · Repair café · Mesh networking · Most categories severely underrepresented — smallest major-city tech scene",
+  "canberra": "Decentralised tech · Repair café · Radio · Open-source hardware · Civic tech (despite the capital)",
+  "hobart": "Almost everything — makerspaces, open source, decentralised, AI, security. Tasmania has the thinnest tech commons of any state",
+  "newcastle": "Makerspaces (group defunct) · AI · Security · Open source · Languages — TTN/LoRa a bright spot",
+  "goldcoast": "Makerspaces · Open source · AI · Decentralised · Security — limited despite population size",
+  "wollongong": "Makerspaces · Open source · AI · Radio · Security — startup-focused but thin on commons tech",
+  "geelong": "Almost everything — startup community present but no commons tech infrastructure",
+  "darwin": "Almost everything — single general tech group for the entire NT",
+  "shared": "Commons governance tooling · Cooperative platform development · Open-source hardware certification · Community mesh networking · Community energy / microgrid tech · National repair café network coordination"
+}

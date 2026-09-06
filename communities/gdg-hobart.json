@@ -1,0 +1,17 @@
+{
+  "id": "gdg-hobart",
+  "name": "GDG Hobart",
+  "shortName": "GDG Hobart",
+  "category": "languages",
+  "city": "hobart",
+  "members": null,
+  "lat": -42.88,
+  "lng": 147.33,
+  "who": "Google Developer Group — Tasmania",
+  "what": "Android · Kotlin · Flutter · Firebase · ML · IoT",
+  "when": "Regular meetups",
+  "where": "Hobart",
+  "how": "meetup.com/gdg-hobart",
+  "url": "https://www.meetup.com/gdg-hobart/",
+  "why": "Tasmania's Google tech community"
+}

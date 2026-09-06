@@ -1,0 +1,17 @@
+{
+  "id": "perth-radio",
+  "name": "Perth Radio Clubs (VK6)",
+  "shortName": "VK6 Radio",
+  "category": "radio",
+  "city": "perth",
+  "members": null,
+  "lat": -31.95,
+  "lng": 115.86,
+  "who": "Amateur radio clubs — Western Australia",
+  "what": "Licensing · contests · low-frequency experiments · digital modes",
+  "when": "Regular club meetings",
+  "where": "Various Perth locations",
+  "how": "wia.org.au/clubs/vk6",
+  "url": "https://www.wia.org.au/clubs/vk6/",
+  "why": "Amateur radio experimentation across WA"
+}

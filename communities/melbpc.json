@@ -1,0 +1,17 @@
+{
+  "id": "melbpc",
+  "name": "MelbPC",
+  "shortName": "MelbPC",
+  "category": "makerspaces",
+  "city": "naarm",
+  "members": null,
+  "lat": -37.936,
+  "lng": 145.055,
+  "who": "One of Australia's largest tech clubs",
+  "what": "MicroController Workshop · CNC Project Team · MakerSpace · computing SIGs",
+  "when": "MicroController Sat 11am–4:30pm · CNC Sundays",
+  "where": "Moorabbin (primary) · Essendon · Mt Waverley · Sunbury",
+  "how": "melbpc.org.au",
+  "url": "https://melbpc.org.au",
+  "why": "Community computing education since the PC era"
+}

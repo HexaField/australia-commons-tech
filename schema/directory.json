@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Directory",
+  "description": "An external directory or resource covering a specific vertical of Australian tech communities.",
+  "type": "object",
+  "required": ["id", "name", "scope", "url", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique kebab-case identifier.",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full display name."
+    },
+    "scope": {
+      "type": "string",
+      "description": "What vertical this directory covers (e.g. Makerspaces, Civic Tech, Radio)."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Primary URL."
+    },
+    "description": {
+      "type": "string",
+      "description": "One-paragraph description of what the directory covers and how it differs from this one."
+    }
+  },
+  "additionalProperties": false
+}

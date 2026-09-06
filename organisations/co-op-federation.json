@@ -1,0 +1,16 @@
+{
+  "id": "co-op-federation",
+  "name": "The Co-op Federation",
+  "shortName": "Co-op Fed",
+  "orgType": "peak-body",
+  "category": "community",
+  "city": "sydney",
+  "lat": -33.869,
+  "lng": 151.209,
+  "focus": "Supporting and promoting co-operatives in Australia. Education, training, advocacy, and resources for starting and running co-ops.",
+  "scope": "national",
+  "founded": null,
+  "url": "https://fed.coop/",
+  "how": "fed.coop",
+  "why": "Co-operative education and formation support"
+}

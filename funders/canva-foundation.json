@@ -1,0 +1,19 @@
+{
+  "id": "canva-foundation",
+  "name": "Canva Foundation",
+  "shortName": "Canva",
+  "funderType": "corporate",
+  "city": "sydney",
+  "lat": -33.865,
+  "lng": 151.209,
+  "focus": "Free Canva for 100M+ educators and 870k+ NFPs ($1.5bn annual value). $50M+ in grants annually. 80% wealth pledge by founders. Focus on foundational learning, digital access, community skills volunteering.",
+  "fundingTypes": [
+    "grants",
+    "in-kind",
+    "sponsorship"
+  ],
+  "scope": "international",
+  "url": "https://www.canva.com/newsroom/news/step-two-impact/",
+  "how": "canva.com (impact)",
+  "why": "Largest in-kind tech donation to Australian NFPs"
+}

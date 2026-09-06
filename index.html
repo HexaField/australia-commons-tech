@@ -63,6 +63,21 @@ main{max-width:1400px;margin:28px auto 0;padding:0 24px}
 .card dd a:hover{text-decoration:underline}
 footer{max-width:1400px;margin:36px auto 48px;padding:20px 24px 0;border-top:1px solid #e5e7eb}
 footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+/* ---- entity type badges ---- */
+.entity-type{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-left:6px;vertical-align:1px}
+.entity-type.nonprofit{background:#dbeafe;color:#1d4ed8}
+.entity-type.cooperative{background:#dcfce7;color:#15803d}
+.entity-type.social-enterprise{background:#fef3c7;color:#92400e}
+.entity-type.peak-body{background:#e0e7ff;color:#4338ca}
+.entity-type.ngo{background:#dbeafe;color:#1d4ed8}
+.entity-type.foundation{background:#fce7f3;color:#9d174d}
+.entity-type.government{background:#e0e7ff;color:#4338ca}
+.entity-type.corporate{background:#fef3c7;color:#92400e}
+.entity-type.industry-body{background:#f3e8ff;color:#7c3aed}
+.scope-tag{font-size:9px;font-weight:500;color:#9ca3af;text-transform:uppercase;letter-spacing:.3px}
+.funding-types{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
+.funding-type{font-size:9px;padding:1px 5px;border-radius:3px;background:#f3f4f6;color:#6b7280}
+
 /* ---- category filter ---- */
 .cat-bar{display:flex;gap:5px;padding:0 24px 16px;max-width:1400px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .cat-tab{padding:4px 12px;border-radius:16px;border:1.5px solid #e5e7eb;background:#fff;font-size:11px;font-weight:500;color:#6b7280;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px;flex-shrink:0;white-space:nowrap}
@@ -133,7 +148,9 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 <p>Shared hardware, free software, and community infrastructure — city by city</p>
 <div class="top-tabs">
 <button class="top-tab active" data-view="communities">Communities</button>
-<button class="top-tab" data-view="directories">Related Directories</button>
+<button class="top-tab" data-view="organisations">Organisations</button>
+<button class="top-tab" data-view="funders">Funders</button>
+<button class="top-tab" data-view="directories">Directories</button>
 </div>
 </header>
 
@@ -161,6 +178,15 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 </footer>
 </div><!-- /view-communities -->
 
+<div id="view-organisations" class="view-container">
+<div class="city-bar" id="org-city-bar"></div>
+<main id="org-list"></main>
+</div><!-- /view-organisations -->
+
+<div id="view-funders" class="view-container">
+<main id="funder-list" style="max-width:1400px;margin:24px auto 0;padding:0 24px"></main>
+</div><!-- /view-funders -->
+
 <div id="view-directories" class="view-container">
 <section class="resources" style="margin-top:24px">
 <h2>Related Directories</h2>
@@ -175,8 +201,9 @@ footer h2{font-size:13px;font-weight:600;color:#6b7280;margin-bottom:6px;text-tr
 
 // ═══ STATE ═══
 
-let CITIES, CATS, C, SCHED, GAPS, DIRS;
+let CITIES, CATS, C, SCHED, GAPS, DIRS, ORGS, FUNDERS;
 let catMap, cById;
+let orgCity = 'all';
 let activeCity = 'all';
 let activeCategory = 'all';
 let userLocation = null;
@@ -450,6 +477,89 @@ function renderDirectories(){
   ).join('');
 }
 
+function renderOrgCityBar(){
+  const bar = document.getElementById('org-city-bar');
+  if (!bar) return;
+  const allCities = [{id:'all',label:'All'}].concat(
+    CITIES.filter(c => c.id !== 'all').filter(c => ORGS.some(o => o.city === c.id))
+  );
+  const counts = {};
+  allCities.forEach(ct => {
+    counts[ct.id] = ct.id === 'all' ? ORGS.length : ORGS.filter(o => o.city === ct.id).length;
+  });
+  bar.innerHTML = allCities.map(ct =>
+    `<button class="city-btn${ct.id === orgCity ? ' active' : ''}" data-city="${ct.id}">${ct.label}<span class="count">${counts[ct.id]}</span></button>`
+  ).join('');
+  bar.querySelectorAll('.city-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      orgCity = btn.dataset.city;
+      renderOrgCityBar();
+      renderOrganisations();
+    });
+  });
+}
+
+function renderOrganisations(){
+  const el = document.getElementById('org-list');
+  if (!el) return;
+  const items = orgCity === 'all' ? ORGS : ORGS.filter(o => o.city === orgCity);
+  const cityLabels = Object.fromEntries(CITIES.filter(c=>c.id!=='all').map(c=>[c.id, c.label.split(' / ').pop()]));
+
+  // Group by orgType
+  const typeLabels = {nonprofit:'Non-Profits',cooperative:'Cooperatives','social-enterprise':'Social Enterprises','peak-body':'Peak Bodies',ngo:'NGOs'};
+  const types = [...new Set(items.map(o => o.orgType))];
+
+  el.innerHTML = '<div style="max-width:1400px;margin:24px auto 0;padding:0 24px">' +
+    types.map(t => {
+      const group = items.filter(o => o.orgType === t);
+      return `<section class="cat-section"><h2 style="--c:#2563eb">${typeLabels[t] || t}</h2>` +
+        `<div class="card-grid">${group.map(o => {
+          const cat = catMap[o.category];
+          return `<div class="card" style="--c:${cat ? cat.color : '#6b7280'}">` +
+            `<h3><span class="dot"></span>${o.name}` +
+            `<span class="meta">` +
+            `<span class="entity-type ${o.orgType}">${o.orgType.replace('-',' ')}</span>` +
+            `<span class="scope-tag">${o.scope}</span>` +
+            (orgCity === 'all' ? `<span class="city-tag">${cityLabels[o.city] || o.city}</span>` : '') +
+            `</span></h3><dl>` +
+            `<dt>Focus</dt><dd>${o.focus}</dd>` +
+            (o.founded ? `<dt>Est.</dt><dd>${o.founded}</dd>` : '') +
+            `<dt>How</dt><dd><a href="${o.url}" target="_blank" rel="noopener">${o.how}</a></dd>` +
+            `<dt>Why</dt><dd>${o.why}</dd>` +
+            `</dl></div>`;
+        }).join('')}</div></section>`;
+    }).join('') + '</div>';
+}
+
+function renderFunders(){
+  const el = document.getElementById('funder-list');
+  if (!el) return;
+  const cityLabels = Object.fromEntries(CITIES.filter(c=>c.id!=='all').map(c=>[c.id, c.label.split(' / ').pop()]));
+
+  // Group by funderType
+  const typeLabels = {foundation:'Foundations',government:'Government Programs',corporate:'Corporate Philanthropy','industry-body':'Industry Bodies'};
+  const types = [...new Set(FUNDERS.map(f => f.funderType))];
+
+  el.innerHTML = types.map(t => {
+    const group = FUNDERS.filter(f => f.funderType === t);
+    return `<section class="cat-section"><h2 style="--c:#059669">${typeLabels[t] || t}</h2>` +
+      `<div class="card-grid">${group.map(f => {
+        return `<div class="card" style="--c:#059669">` +
+          `<h3><span class="dot"></span>${f.name}` +
+          `<span class="meta">` +
+          `<span class="entity-type ${f.funderType}">${f.funderType.replace('-',' ')}</span>` +
+          `<span class="scope-tag">${f.scope}</span>` +
+          `<span class="city-tag">${cityLabels[f.city] || f.city}</span>` +
+          `</span></h3><dl>` +
+          `<dt>Focus</dt><dd>${f.focus}</dd>` +
+          `<dt>Funds</dt><dd><div class="funding-types">${f.fundingTypes.map(t => `<span class="funding-type">${t}</span>`).join('')}</div></dd>` +
+          `<dt>How</dt><dd><a href="${f.url}" target="_blank" rel="noopener">${f.how}</a></dd>` +
+          `<dt>Why</dt><dd>${f.why}</dd>` +
+          `</dl></div>`;
+      }).join('')}</div></section>`;
+  }).join('');
+}
+
 function renderAll(){
   renderCityBar();
   renderCatBar();
@@ -470,11 +580,16 @@ fetch('data/all.json')
     SCHED = data.schedule;
     GAPS = data.gaps;
     DIRS = data.directories;
+    ORGS = data.organisations || [];
+    FUNDERS = data.funders || [];
 
     catMap = Object.fromEntries(CATS.map(c => [c.id, c]));
     cById = Object.fromEntries(C.map(c => [c.id, c]));
 
     renderAll();
+    renderOrgCityBar();
+    renderOrganisations();
+    renderFunders();
     renderDirectories();
   })
   .catch(err => {

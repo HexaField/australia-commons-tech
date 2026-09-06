@@ -1,0 +1,18 @@
+{
+  "id": "linux-australia-grants",
+  "name": "Linux Australia Grants Program",
+  "shortName": "LA Grants",
+  "funderType": "industry-body",
+  "city": "sydney",
+  "lat": -33.872,
+  "lng": 151.205,
+  "focus": "Seeds and supports open-source projects, conferences, and community events in Australia. Funds linux.conf.au, PyCon AU, and other community conferences.",
+  "fundingTypes": [
+    "grants",
+    "sponsorship"
+  ],
+  "scope": "national",
+  "url": "https://linux.org.au/grants/",
+  "how": "linux.org.au/grants",
+  "why": "Direct funding for Australian open-source projects"
+}

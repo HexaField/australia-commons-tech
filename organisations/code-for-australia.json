@@ -1,0 +1,16 @@
+{
+  "id": "code-for-australia",
+  "name": "Code for Australia",
+  "shortName": "CfA",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "naarm",
+  "lat": -37.817,
+  "lng": 144.955,
+  "focus": "Civic tech — places technologists in government and NFPs via fellowship program. 100+ fellows, 10,000+ community members, 100+ project partners. Part of global Code for All network.",
+  "scope": "national",
+  "founded": 2014,
+  "url": "https://www.codeforaustralia.org/",
+  "how": "codeforaustralia.org",
+  "why": "Bridges tech talent and public-interest institutions"
+}

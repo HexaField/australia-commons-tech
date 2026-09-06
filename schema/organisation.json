@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Organisation",
+  "description": "A tech-oriented or commons-oriented non-profit, cooperative, or social enterprise.",
+  "type": "object",
+  "required": ["id", "name", "orgType", "category", "city", "lat", "lng", "focus", "scope", "url", "why"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string",
+      "description": "Abbreviated name for compact UI."
+    },
+    "orgType": {
+      "type": "string",
+      "enum": ["nonprofit", "cooperative", "social-enterprise", "peak-body", "ngo"],
+      "description": "What kind of organisation."
+    },
+    "category": {
+      "type": "string",
+      "description": "Category ID from data/categories.json."
+    },
+    "city": {
+      "type": "string",
+      "description": "City ID. Use 'national' for organisations that operate Australia-wide without a single home."
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "focus": {
+      "type": "string",
+      "description": "What the organisation does — its mission and activities."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["local", "state", "national", "international"],
+      "description": "Geographic scope of operations."
+    },
+    "founded": {
+      "type": ["integer", "null"],
+      "description": "Year founded, or null if unknown."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "how": {
+      "type": "string",
+      "description": "Short link label."
+    },
+    "why": {
+      "type": "string",
+      "description": "Why this organisation matters for the commons."
+    }
+  },
+  "additionalProperties": false
+}

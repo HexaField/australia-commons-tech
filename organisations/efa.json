@@ -1,0 +1,16 @@
+{
+  "id": "efa",
+  "name": "Electronic Frontiers Australia",
+  "shortName": "EFA",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "naarm",
+  "lat": -37.814,
+  "lng": 144.963,
+  "focus": "Digital rights advocacy — privacy, freedom of expression, encryption, surveillance reform, AI governance. Public policy submissions and education since 1994.",
+  "scope": "national",
+  "founded": 1994,
+  "url": "https://efa.org.au/",
+  "how": "efa.org.au",
+  "why": "Australia's longest-running digital rights organisation"
+}

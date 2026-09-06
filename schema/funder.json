@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Funder",
+  "description": "A foundation, government program, or corporate philanthropy body that funds commons tech work.",
+  "type": "object",
+  "required": ["id", "name", "funderType", "city", "lat", "lng", "focus", "scope", "url", "why"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "funderType": {
+      "type": "string",
+      "enum": ["foundation", "government", "corporate", "industry-body"],
+      "description": "What kind of funder."
+    },
+    "city": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "focus": {
+      "type": "string",
+      "description": "What they fund and their funding priorities."
+    },
+    "fundingTypes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Types of funding offered (grants, fellowships, sponsorship, in-kind, equity, impact-investment)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["local", "state", "national", "international"]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "how": {
+      "type": "string"
+    },
+    "why": {
+      "type": "string",
+      "description": "Why this funder matters for the commons."
+    }
+  },
+  "additionalProperties": false
+}

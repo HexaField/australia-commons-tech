@@ -1,0 +1,16 @@
+{
+  "id": "linux-australia",
+  "name": "Linux Australia",
+  "shortName": "LA",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "sydney",
+  "lat": -33.87,
+  "lng": 151.208,
+  "focus": "Peak body for open-source in Australasia. Runs linux.conf.au, grants program seeding FOSS projects, supports LUGs and hackerspaces nationally.",
+  "scope": "national",
+  "founded": 1999,
+  "url": "https://linux.org.au/",
+  "how": "linux.org.au",
+  "why": "National peak body for free and open-source software"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ada",
+  "name": "Australian Digital Alliance",
+  "shortName": "ADA",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "canberra",
+  "lat": -35.278,
+  "lng": 149.131,
+  "focus": "Coalition promoting balanced copyright law. Provides public-interest voice in copyright reform debates. Members include universities, libraries, and tech organisations.",
+  "scope": "national",
+  "founded": 1999,
+  "url": "https://digital.org.au/",
+  "how": "digital.org.au",
+  "why": "Advocates for public interest in copyright law"
+}

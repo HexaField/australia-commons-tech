@@ -1,0 +1,16 @@
+{
+  "id": "openaustralia",
+  "name": "OpenAustralia Foundation",
+  "shortName": "OAF",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "sydney",
+  "lat": -33.868,
+  "lng": 151.21,
+  "focus": "Builds free civic tech — Planning Alerts (198k+ development applications), They Vote For You (parliamentary voting records), Right to Know (FOI requests). All open source.",
+  "scope": "national",
+  "founded": 2007,
+  "url": "https://oaf.org.au/",
+  "how": "oaf.org.au",
+  "why": "Open-source civic infrastructure used by millions"
+}

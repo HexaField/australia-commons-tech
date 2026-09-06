@@ -1,0 +1,17 @@
+{
+  "id": "auda-foundation",
+  "name": "auDA Foundation",
+  "shortName": "auDA",
+  "funderType": "industry-body",
+  "city": "naarm",
+  "lat": -37.818,
+  "lng": 144.96,
+  "focus": "Community grants for digital inclusion and innovation. $5.1M across 185 projects since 2006. $50k per project, 15 projects per round. Targets rural/remote, disability, First Nations, older Australians, youth.",
+  "fundingTypes": [
+    "grants"
+  ],
+  "scope": "national",
+  "url": "https://www.auda.org.au/public-impact/public-benefit-program/community-grant-program/",
+  "how": "auda.org.au",
+  "why": ".au domain authority reinvesting in digital inclusion"
+}

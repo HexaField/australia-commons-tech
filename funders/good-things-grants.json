@@ -1,0 +1,17 @@
+{
+  "id": "good-things-grants",
+  "name": "Good Things Foundation Grants",
+  "shortName": "Good Things $",
+  "funderType": "foundation",
+  "city": "sydney",
+  "lat": -33.864,
+  "lng": 151.212,
+  "focus": "Be Connected grants for organisations supporting digital inclusion of older Australians. Bridge program grants for disability digital inclusion. Digital Sisters for women.",
+  "fundingTypes": [
+    "grants"
+  ],
+  "scope": "national",
+  "url": "https://goodthingsaustralia.org/grants-and-opportunities/",
+  "how": "goodthingsaustralia.org/grants",
+  "why": "Grants specifically for digital inclusion programs"
+}

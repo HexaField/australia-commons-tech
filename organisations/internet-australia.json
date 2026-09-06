@@ -1,0 +1,16 @@
+{
+  "id": "internet-australia",
+  "name": "Internet Australia",
+  "shortName": "IA",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "canberra",
+  "lat": -35.281,
+  "lng": 149.13,
+  "focus": "Peak body representing internet users. Australian chapter of the Internet Society (ISOC). Advocates for open, accessible, secure internet. Policy submissions on NBN, privacy, censorship.",
+  "scope": "national",
+  "founded": 1996,
+  "url": "https://internet.org.au/",
+  "how": "internet.org.au",
+  "why": "Advocates for the open internet in Australian policy"
+}

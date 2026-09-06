@@ -1,0 +1,20 @@
+{
+  "id": "atlassian-foundation",
+  "name": "Atlassian Foundation",
+  "shortName": "Atlassian",
+  "funderType": "corporate",
+  "city": "sydney",
+  "lat": -33.867,
+  "lng": 151.206,
+  "focus": "Pledge 1% model — 1% equity, profit, and employee time to social impact. STEM education in regional Australia. NFP technology grants (Atlassian product access). Impact investing in social enterprises.",
+  "fundingTypes": [
+    "grants",
+    "in-kind",
+    "impact-investment",
+    "fellowships"
+  ],
+  "scope": "international",
+  "url": "https://www.atlassianfoundation.org/",
+  "how": "atlassianfoundation.org",
+  "why": "Major Australian tech philanthropy — Pledge 1% pioneer"
+}

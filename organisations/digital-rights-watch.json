@@ -1,0 +1,16 @@
+{
+  "id": "digital-rights-watch",
+  "name": "Digital Rights Watch",
+  "shortName": "DRW",
+  "orgType": "nonprofit",
+  "category": "opensource",
+  "city": "naarm",
+  "lat": -37.81,
+  "lng": 144.968,
+  "focus": "Advocacy for ethical data use, digital government accountability, rights-based policy, and informed citizens. Campaigns on surveillance, encryption, and platform regulation.",
+  "scope": "national",
+  "founded": 2016,
+  "url": "https://digitalrightswatch.org.au/",
+  "how": "digitalrightswatch.org.au",
+  "why": "Campaigns for digital rights at the policy level"
+}
